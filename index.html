@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
 html{
   height:100%;
@@ -73,11 +75,12 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height:100%; 
-  	position:relative;
-  	font-family: Arial, Helvetica, sans-serif;
-  	color: white;
+  position:relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
-.content{
+
+#content{
 	max-height:300px;
 	max-width: 600px;
 	background: rgba(102, 153, 204, 0.8);
@@ -85,7 +88,7 @@ body{
 	font-size: 5;
 	border-radius: 5px;
 	border box-shadow: 0px 0px 10px black;
-	margin-top: 150px;
+	margin-top: 10%;
 	line-height: 30px;
 	padding: 30px;
 	color: white;
@@ -106,14 +109,40 @@ body{
 .name{
 	margin-right: 20px;
 }
+#blog{
+  border: 2px solid black;
+  background: slateblue;
+  padding: 10px;
+  line-height: 30px;
+}
+.showcase{
+  max-height: 200px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: scroll;
+}
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 </style>
 </head>
 <body>
 
 <ul class="header">
 	<li class="name"><font size="6" color="white">Lobsang Tashi</font></li>
-  	<li><a class="active" href="#home">Home</a></li>
-  	<li><a href="#news">Blog</a></li>
+  	<li><a class="active" href="#about" class="tablinks" onclick="nextDiv(event,'content')">Home</a></li>
+  	<li><a href="#blog" class="tablinks" onclick="nextDiv(event,'blog')">Blog</a></li>
   	<li class="dropdown">
     <a href="#" class="dropbtn">Dropdown</a>
     <div class="dropdown-content">
@@ -123,10 +152,27 @@ body{
     </div>
   </li>
 </ul>
-<div class="content">
+
+<div id="content" class="tabcontent">
 	<h3>About....</h3>
 	<p>Hi My name Is Lobsang Tashi. I am a phtographer, videographer, programmer and a web-developer. I have done various projects with big comapnies like Viacom and my own projects with friends and families to help them in technical aspects of their projects. Follow me for my weekly blogs. </p>
 </div>
+
+
+
+
+<div id= "blog" class="tabcontent" hidden>
+  <div class="showcase">
+  <h4 id= "blogtitle" align="middle">Ttitle</h4>
+      <p id="blogcontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras urna mauris, lobortis in tellus non, ultrices viverra est. Praesent ac porttitor arcu. In quis lectus in lorem malesuada viverra. Praesent placerat bibendum nibh vestibulum rutrum. Nullam id euismod lorem. Etiam dictum mi vitae massa sagittis, vel aliquet mauris viverra. Maecenas eu leo sit amet justo convallis vehicula eu eget ante. Nulla cursus blandit nunc eu accumsan. Vestibulum cursus fermentum erat sit amet egestas. Quisque tempus dapibus sapien, et suscipit massa efficitur sit amet. Mauris auctor ac neque sed cursus. Sed aliquam mollis aliquet.<br>
+      <br>
+      Nunc ante urna, sodales sed orci id, vestibulum tincidunt tortor. Mauris at lacus eget felis viverra dignissim. Curabitur dictum faucibus ex id efficitur. Ut facilisis mauris a turpis ultrices, eget rutrum sapien luctus. Nullam feugiat, tortor eu pretium imperdiet, augue dolor consequat odio, sed efficitur ipsum eros ac purus. Nam ligula nulla, congue ac vestibulum volutpat, vestibulum eu ex. Donec libero magna, scelerisque iaculis ante eu, ultricies accumsan eros. Cras ac congue leo, nec tincidunt turpis. Duis congue ligula nec arcu laoreet euismod. Duis turpis elit, pulvinar id tortor sit amet, mattis rutrum mi. Aliquam ultricies arcu sit amet est accumsan cursus. Fusce et elementum ex, vitae malesuada nisi. Proin nibh est, tempus a sollicitudin at, faucibus sed purus. Donec mattis sem non feugiat porttitor. Curabitur pretium maximus nulla et rutrum. Donec id neque euismod, rutrum metus ac, ullamcorper dolor.<br>
+      <br>
+      Mauris tincidunt lacinia turpis, ut vehicula quam tristique sed. Aliquam erat volutpat. Donec sit amet arcu sit amet ligula cursus bibendum vitae a lacus. Duis vehicula sollicitudin tempus. Praesent purus tortor, tempor ut placerat eget, auctor quis nibh. Sed facilisis id arcu interdum euismod. Praesent imperdiet, diam vitae elementum volutpat, lacus odio varius enim, ut vehicula nisi urna at mi.
+      </p>
+  </div>
+</div>
+
 
 <footer>
     <div class="footnote">
