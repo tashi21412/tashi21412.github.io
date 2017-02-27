@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function(){
+  
+    $("#processing").click(function(){
+        $("#processingproject").toggle(500);
+        $("#androidproject").hide(500);
+        $("#iosproject").hide(500);
+    });
+  
+});
+$(document).ready(function(){
+  
+    $("#android").click(function(){
+        $("#processingproject").hide(500);
+        $("#androidproject").toggle(500);
+        $("#iosproject").hide(500);
+    });
+  
+});
+$(document).ready(function(){
+  
+    $("#ios").click(function(){
+        $("#processingproject").hide(500);
+        $("#androidproject").hide(500);
+        $("#iosproject").toggle(500);
+    });
+  
+});
+</script>
+<style>
+html{
+  height:100%;
+}
+
+img {
+  margin: 10px;
+}
+*{  
+  margin-top: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: none;
+
+}
+
+.header {
+    list-style-type: none;
+    margin-bottom:20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FF8C00;
+
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #F49AC2;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+footer {
+            background-color: #FF8C00;
+            width: 100%;
+            min-height: 150px;
+            bottom: 0;
+            position: fixed;
+            text-align: center;
+          
+
+        }
+ul{
+	list-style-type: none;
+}
+body{
+	margin: 0px;
+	background-image: url("background.jpg");
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height:100%; 
+  position:relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#content{
+	max-height:360px;
+	max-width: 600px;
+	background: rgba(102, 153, 204, 0.8);
+	margin: auto;
+	font-size: 5;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px black;
+	margin-top: 10%;
+	line-height: 30px;
+	padding: 30px;
+	color: white;
+	text-align: center;
+
+}
+.footnote{
+	
+	max-width: 350px;
+	overflow: auto;
+	margin: auto;
+
+}
+.footnotep{
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+}
+.logo{
+	margin-left: 30px;
+}
+
+.name{
+  margin-left: 20px;
+	margin-right: 20px;
+}
+.showcase{
+  border: 2px solid black;
+  background: rgba(102, 153, 204, 0.8);
+
+  margin: auto;
+  box-shadow: 0px 0px 10px black;
+  max-width: 700px;
+  padding: 20px;
+  line-height: 30px;
+}
+.showcase{
+  max-height: 400px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: scroll;
+}
+.downarrowimage{
+    
+}
+.downarrow{
+  background: rgba(0,0,0,0.2);
+}
+.blogimage{
+  background-image: url("image/gate.jpg");
+  min-width: 300px;
+  min-height:600px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+#android,#ios,#processing
+{
+  float: left;
+  border: 2px solid white;
+  padding-left: 100px;
+  padding-right: 100px;
+  box-shadow:  0px 5px 40px #888888
+
+
+}
+#projects{
+  
+  overflow: auto;
+  background: rgba(200,200,200,0.4);
+  border-radius: 10px;
+}
+.projectname{
+  float: none;
+}
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+</style>
+</head>
+<body>
+
+<ul class="header">
+	<li class="name"><font size="6" color="white">Lobsang Tashi</font></li>
+  	<li><a class="active" href="#about" class="tablinks" onclick="nextDiv(event,'content')">Home</a></li>
+  	<li><a href="#blog" class="tablinks" onclick="nextDiv(event,'blog')">Blog</a></li>
+  	<li class="dropdown">
+    <a href="#" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#projects" class = "tablinks" onclick = "nextDiv(event,'projects')">Project</a>
+      <a href="gallery.html">Photography & Videos</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </li>
+</ul>
+
+<div id="content" class="tabcontent">
+
+	<img src= "profile.png" height ="100" width ="100">
+	<p>My name is Lobsang Tashi. I am an aspiring Web Developer and Programmer. My focus as a Web Developer is to create well designed and asthetically pleasing client-side front end websites and as a
+	programmer come out with efficient and scalable solutions to problems. On the side, I am a photographer and videographer; which enhances and compliments 
+	my skill to build beutiful websites. </p>
+</div>
+
+
+
+
+<div id= "blog" class="tabcontent" hidden>
+  <div class="showcase">
+  
+  <div class = "downarrow">
+      <div class="blogimage"></div>
+    <center><img src = "image/downarrow.png" class="downarrowimage" height="75" width= "75"></center>
+     <h4 id= "blogtitle" align="middle">Title</h4>
+  </div>
+      <p id="blogcontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras urna mauris, lobortis in tellus non, ultrices viverra est. Praesent ac porttitor arcu. In quis lectus in lorem malesuada viverra. Praesent placerat bibendum nibh vestibulum rutrum. Nullam id euismod lorem. Etiam dictum mi vitae massa sagittis, vel aliquet mauris viverra. Maecenas eu leo sit amet justo convallis vehicula eu eget ante. Nulla cursus blandit nunc eu accumsan. Vestibulum cursus fermentum erat sit amet egestas. Quisque tempus dapibus sapien, et suscipit massa efficitur sit amet. Mauris auctor ac neque sed cursus. Sed aliquam mollis aliquet.<br>
+      <br>
+      Nunc ante urna, sodales sed orci id, vestibulum tincidunt tortor. Mauris at lacus eget felis viverra dignissim. Curabitur dictum faucibus ex id efficitur. Ut facilisis mauris a turpis ultrices, eget rutrum sapien luctus. Nullam feugiat, tortor eu pretium imperdiet, augue dolor consequat odio, sed efficitur ipsum eros ac purus. Nam ligula nulla, congue ac vestibulum volutpat, vestibulum eu ex. Donec libero magna, scelerisque iaculis ante eu, ultricies accumsan eros. Cras ac congue leo, nec tincidunt turpis. Duis congue ligula nec arcu laoreet euismod. Duis turpis elit, pulvinar id tortor sit amet, mattis rutrum mi. Aliquam ultricies arcu sit amet est accumsan cursus. Fusce et elementum ex, vitae malesuada nisi. Proin nibh est, tempus a sollicitudin at, faucibus sed purus. Donec mattis sem non feugiat porttitor. Curabitur pretium maximus nulla et rutrum. Donec id neque euismod, rutrum metus ac, ullamcorper dolor.<br>
+      <br>
+      Mauris tincidunt lacinia turpis, ut vehicula quam tristique sed. Aliquam erat volutpat. Donec sit amet arcu sit amet ligula cursus bibendum vitae a lacus. Duis vehicula sollicitudin tempus. Praesent purus tortor, tempor ut placerat eget, auctor quis nibh. Sed facilisis id arcu interdum euismod. Praesent imperdiet, diam vitae elementum volutpat, lacus odio varius enim, ut vehicula nisi urna at mi.
+      </p>
+  </div>
+</div>
+<center><div id = "projects" class = "tabcontent" hidden>
+  <div id = "processing">
+    <h2 id = "processingletter">Processing</h2>
+    <div id = "processingproject"class = "projectlist" hidden>
+      <ul>
+        <li class = "projectname">processing</li>
+        <li class = "projectname">processing</li>
+        <li class = "projectname">processing</li>
+        <li class = "projectname">processing</li> 
+        <li class = "projectname">processing</li>
+        <li class = "projectname">processing</li>
+        <li class = "projectname">processing</li>
+      </ul>
+    </div>
+  </div>
+  <div id = "android">
+    <h2>Android</h2>
+    <div  id = "androidproject"class = "projectlist" hidden>
+      <ul>
+        <li class = "projectname">android</li>
+        <li class = "projectname">android</li>
+        <li class = "projectname">android</li>
+        <li class = "projectname">android</li> 
+        <li class = "projectname">android</li>
+        <li class = "projectname">android</li>
+        <li class = "projectname">android</li>
+      </ul>
+    </div>
+  </div>
+  <div id = "ios">
+    <h2>IOS</h2>
+    <div id = "iosproject" class = "projectlist" hidden>
+      <ul>
+        <li class = "projectname">ios</li>
+        <li class = "projectname">ios</li>
+        <li class = "projectname">ios</li>
+        <li class = "projectname">ios</li> 
+        <li class = "projectname">ios</li>
+        <li class = "projectname">ios</li>
+        <li class = "projectname">ios</li>
+      </ul>
+    </div>
+  </div>
+</div></center>
+
+
+<footer>
+    <div class="footnote">
+    	<p class="footnotep">Follow me on:</p>
+    	<ul>
+    		<li class="logo"><img src="instagramlogo.png" height="42" width="42"></li>
+  			<li class="logo"><img src="facebooklogo.png" height="42" width="42"></li>
+  			<li class="logo"><img src="twitterlogo.png" height="42" width="42"></li>
+    	</ul>
+    </div>
+</footer>
+</body>
+</html>
