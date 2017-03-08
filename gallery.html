@@ -1,14 +1,36 @@
 
 <!DOCTYPE html>
 <html>
-<head>Gallery</head>
+<head> <link rel="shortcut icon" type="image/x-icon" href="profile.ico" /></head>
 <body>
-<style>
+
+  <div id = "container" class ="menucontainer">
+    <a href = "index.html"><img class = "backbutton"  src = "back.png" height = 100px width=100px/></a>
+    <center><h1>Gallery<h1></center>
+  </div>
+  <style>
 
 html{
   height:100%;
 }
-
+h1{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.menucontainer{
+  background: orange;
+  position: fixed;
+  box-shadow: 8px 0px 10px #A9A9A9;
+}
+ .backbutton{
+  float: left;
+  
+  padding-right: 10px;
+  border-radius: 50px;
+ }
+ .backbutton:hover{
+  background: rgba(211,211,211,0.4);
+ }
 
 *{  
   margin-top: 0px;
@@ -26,23 +48,39 @@ li{
   float: left;
 }
 body{
- background-image: url("background.jpg");
+ 
  background-size: 100%;
 
 }
 
 .imageContainer{
   background: rgba(255,69,0,0.2);
-  min-width: 100%;
-  min-height: 500px;
+  min-width: 1000px;
+  min-height: 450px;
+  overflow: auto;
+  box-shadow: 0px 0px 15px #888888;
+}
+.listedImage{
+  height: 100%;
+  width: 100%
+
 }
 
 </style>
 
   <div id = "content" class = "imageContainer">
     <ul class = "galleryImage">
-      <li><img class = "featureImage" src = "image/cutegirl.jpg" height = "400px" width = "600px"></li>
-      <li><img src = "image/DSC_0737.JPG" height ="100" width = "150"></li>
+      
+      <li><img class  = "listedImage"src = "image/DSC_0737.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0738.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0739.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0736.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0655.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_1145.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0891.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0891.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0740.JPG" ></li>
+      <li><img class  = "listedImage"src = "image/DSC_0733.JPG" ></li>
     </ul>
   </div>
 
