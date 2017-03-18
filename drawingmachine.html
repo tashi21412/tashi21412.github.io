@@ -1,0 +1,96 @@
+
+  <html>
+ <head>
+      <title>Drawing Machine</title>
+      <script src="processing-1.0.0.min.js"></script>
+  </head>
+	
+  <body>
+      <center><h1>DRAWING MACHINE</h1></center>
+      <script type="text/processing" data-processing-target="processing-canvas">
+int x;
+int y;
+int z;
+int a;
+int b;
+int c;
+int d;
+int e;
+int f;
+
+float randomY4;
+float randomY3;
+float yAxis1;
+float xAxis1;
+float radius;
+float positionEllipsex;
+float positionEllipsey;
+void setup() {
+
+  frameRate (10);
+  positionEllipsex = random(0, 500);
+  positionEllipsey = random (300, 500);
+  size (500, 500);
+  randomY3= random (0, 500);
+  randomY4= random (0, 500);
+  d=400;
+  x = 50;
+  y = 200;
+  z = 500;
+  a = 400 ;
+  b = 500;
+  f=50;
+  c=10;
+  e=50;
+}
+
+void draw () {
+  strokeWeight (random (5));
+  stroke ( random(255), random(255), random(255), random(255)); 
+  yAxis1= random(0, 100);
+  xAxis1= random (0, z);
+  radius= random (0, 50);
+  positionEllipsex= random (0, 500);
+  positionEllipsey = random (300, 500);
+  frameRate= random (0, 30);
+  if (yAxis1 >50) {
+    ellipse(positionEllipsex, positionEllipsey, radius, radius);
+  }
+  frameRate=random(0, 60);
+  line (random (0, b), yAxis1, random (0, b), yAxis1);
+  line (xAxis1, random (100, 200), xAxis1, random (100, 200));
+
+
+
+  fill (random(255), random(255), random(255), random(255));
+
+  frameRate= random(1);
+  rect (b, randomY4, e, e);
+  b-=20;
+  if (b<0) {
+    b=500;
+  }
+
+  rect (d, randomY3, e, e);
+  strokeWeight(2);
+  stroke(255);
+  d+=20;
+
+  if (d > 1500) {
+    d=5;
+    randomY3=(random(0, 500));
+
+    background(random (30, 100));
+
+    if (f>255) {
+      f=50;
+    }
+    e=10;
+  }
+}
+
+
+ </script>
+ <center><canvas id="processing-canvas" class = "testing"> </canvas></center>
+ </body>
+ </html>
